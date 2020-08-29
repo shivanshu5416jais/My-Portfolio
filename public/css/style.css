@@ -4,7 +4,9 @@
     box-sizing: border-box;
     //display: block;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body{
     font-family:Helvetica,Arial,sans-serif;
     color:white;
@@ -107,7 +109,7 @@ body{
     height: 200px;
   } */
   .p11{
-    margin:2%;
+    margin:0%;
  
   // width:46%;
     color:black;
@@ -137,27 +139,35 @@ body{
     min-height: 300px;
     font-size:40px;
     overflow:auto;
+    padding-top:20px;
+    
     
   }
   #p2 h2{
-    color: green;
+    color: white;
     text-align: center;
+    padding-bottom: 20px;
   }
   .ccc{
     display: block;
-    margin: 0% 30%;
+    margin: 0% 10%;
     //background-color: black;
     min-height: 100px;
-    width: 60%;
+    width: 80%;
     float:left;
    // margin:auto;
   }
  
   .col-33{
-    list-style-type: square;
-    width:46%;
     
-    color:red;
+    height:20vw;
+    width:25vw;
+    line-height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    //margin: 10px;
+
+    color:white;
     //border:3px solid yellow;
     border-radius: 50%;
    // background-color: #e52a6f;
@@ -165,7 +175,11 @@ body{
     font-size: 26px;
    
     
-    padding:2%;
+    //padding:2%;
+  }
+  .col-33 img{
+    width:80%;
+    height:80%;
   }
   /* .ccc::after{
     clear: both;
@@ -235,7 +249,7 @@ body{
   #p3{
     clear: both;
     margin: 0% 2%;
-    color:grey;
+    color:rgb(24, 22, 22);
     font-size: 40px;
    // background-color: #5f0f4e;
   }
@@ -243,10 +257,11 @@ body{
     padding:2% 0%;
     font-size: 45px;
     text-align: center;
+    color: white;
     background-color: #191a1d;
   }
   #p3 p{
-    font-size: 30px;
+    font-size: 2vw;
   }
 
   #footer{
@@ -274,7 +289,8 @@ body{
   color: grey;
 }
 .col-8{
-  text-align: center;
+  padding: 0% 4%;
+  //text-align: center;
   margin-top: 50px;
   width:66%;
   float: left;
@@ -301,22 +317,22 @@ form{
 }
 
 .fa-facebook {
-background: #675682;
+background: #4267B2;
 color: white;
 }
 
 .fa-twitter {
 background: #675682;
-color: white;
+color: #1DA1F2;
 }
 
 .fa-google {
 background: #675682;
-color: white;
+color: #4285F4;
 }
 
 .fa-linkedin {
-background: #675682;
+background: #0e76a8;
 color: white;
 }
 
@@ -356,34 +372,62 @@ button[type=submit]:hover {
 
 .container {
   border-radius: 5px;
+  width: 100%;
   /* background-color: #f2f2f2; */
   padding: 10px;
 }
 .pid{
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size:30px;
-  border:2px dashed greenyellow;
+  
+  border:2px solid groove;
+  border-radius: 50%;
 }
 .pidd{
-  margin-top:30px;
+  margin:auto;
   text-align: left;
   /* border: 2px solid black;
   border-radius: 50%; */
-  padding: 10%;
+  padding: 10% 0%;
 }
 #p3 img{
   height:100%;
   width:100%;
   overflow: hidden;
 }
-#p1,#p2,#p3,#p11{
-  padding-top: 100px;
+#p1,#p3,#p11,footer{
+  padding-top: 80px;
 }
 
+footer h2{
+  text-align: center;
+}
+footer .col-8{
+  text-align:left;
+  margin-top: 50px;
+  font-size: 20px;
+  width:66%;
+  float: left;
+}
+#footer a:hover{
+  background-color: #111;
+}
 @media only screen and (max-width: 700px) {
+  #p1,#p2,#p3,#p11,footer{
+    padding-top: 40px;
+  }
   .col-4,.col-44,#col-3,.col-8{
      width:100%; 
      overflow:auto;
+  }
+  footer .col-8{
+    text-align:left;
+    margin-top: 50px;
+    font-size: 20px;
+    width:100%;
+    float: left;
+  }
+  #p3 p{
+    font-size: 25px;
   }
   #p11 img{
     
@@ -411,6 +455,7 @@ button[type=submit]:hover {
   border:2px solid red;
   width: 50%;
   margin:0% 20%;
+  margin-top: 22%;
 }
 
   .header a {
@@ -431,9 +476,11 @@ button[type=submit]:hover {
   .active {
     background-color: #4a97b6;
   }
-  .p11 img{
-    width:100vw;
-    height:150vw;
+
+   #p1 img{
+     margin:0vw 10vw;
+    width:70vw;
+    height:100vw;
     overflow: auto;
   }
   .flip-card {
@@ -450,9 +497,10 @@ button[type=submit]:hover {
   #p1 .col-8{
     //padding:0% 10% ;
     width: 100%;
+    margin-bottom:20px;
   }
   #p3 .pidd{
-    width:100vw;
+    width:92vw;
     padding: 0px;
     margin-bottom: 30px;
     padding-bottom: 30px;
@@ -460,6 +508,9 @@ button[type=submit]:hover {
   }
   #p3 .col-8{
     margin-top: 0px;
+  }
+  #p3 h1{
+    font-size: 1.5em;
   }
   .col-44{
     width:100vw;
@@ -477,7 +528,7 @@ button[type=submit]:hover {
     margin:1%;
   }
   .logo{
-    margin-top: 60px;
+    margin-top: 6 0px;
     width: 100%;
     padding:0% 20%;
     position: relative;
@@ -486,9 +537,10 @@ button[type=submit]:hover {
   footer h2{
     /* margin-left:20vw; */
     margin-bottom: 15px;
+    width: 100%;
   }
   .container{
-    margin-left:10vw;
+   // margin-left:10vw;
     padding: 0px;
     width:100vw;
   }
@@ -502,19 +554,19 @@ button[type=submit]:hover {
     width:20%;
     float: left;
   }
+  p{
+    font-size: 20px;
+  }
+  #p2{
+     padding-top: 20px;
+  }
+  #p1 p{
+     text-align: center;
+     font-size: 22px;
+  }
 }
 .nav {
   position: fixed;
   width:100vw;
   z-index: 1;
-}
-footer h2{
-  text-align: center;
-}
-footer .col-8{
-  text-align:left;
-  margin-top: 50px;
-  font-size: 20px;
-  width:66%;
-  float: left;
 }

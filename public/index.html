@@ -5,6 +5,25 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+jQuery(window).scroll(function(){
+
+// get the bottom position
+var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
+var scroll_data = {
+        action: 'user_scroll',
+        container_id: container_id
+    };      
+$.ajax({
+         url: wdm_url,
+         data: scroll_data,
+         context: document.body
+       }).done(function(response) {
+            $(this).hide();
+          });     
+});
+</script>
         <title>Portfolio</title>
         <link rel="stylesheet" href="/css/style.css">
     </head>
@@ -18,7 +37,7 @@
                 <a href="#header">Home</a>
                     <a href="#p1">About</a>
                     
-                    <a href="#p33">Projects</a>
+                    <a href="#p3">Projects</a>
                     <a href="#footer">Contact</a>
                   
                   </div>
@@ -42,7 +61,7 @@
             <div id="p1">
                 <center><h2>About Me</h2></center>
                <div class="col-4"><img src="./images/pf.jpg"></div>
-               <div class="col-8">
+               <div class="pidd" style="padding:5%">
                   
                    <p>I'm Shivanshu Jaiswal </p>
                    <p>An undergraduate who is currently doing B.Tech and open for opportunities to work in a progressing organization.
@@ -56,9 +75,9 @@
             <hr/>
             
             <div id="p2">
-               <h2>My Technical Skills</h2>
+               <h2> My Skills </h2>
                
-               <ul class="ccc">
+               <!-- <ul class="ccc">
                <li class="col-33">C++</li>
                <li class="col-33">HTML</li>
                <li class="col-33">CSS</li>
@@ -69,7 +88,16 @@
                <li class="col-33">MONGODB</li>
                <li class="col-33">DATA STRUCTURES</li>
                
-               </ul>
+               </ul> -->
+               <div class="ccc">
+                 <div class="col-33"><img src="./images/html.jpg" alt="HTML"></div>
+                 <div class="col-33"><img src="./images/css.jpg" alt="CSS"></div>
+                 <div class="col-33"><img src="./images/node.jpg" alt="NODEJS"></div>
+                 
+                 <div class="col-33"><img src="./images/react.png" alt="REACT"></div>
+                 <div class="col-33"><img src="./images/c++.jpg" alt="C++"></div>
+                 <div class="col-33"><img src="./images/sql.png" alt="MYSQL"></div>
+               </div>
 
             </div>
             <div id="p3">
@@ -143,9 +171,9 @@
           </div> 
             </div>
             <footer id="footer">'
-                <h2 style="text-align: center;">LETS WORK TOGETHER</h2>
+                <h1 style="text-align: center;">LETS WORK TOGETHER</h1>
                 <div class="col-8">
-                  <h2>Contact us</h2>
+                  <h2>Contact me</h2>
                   <div class="container">
                       <form  name="contact-form" action="/contact" method="GET">
                         <label for="name">Name</label>
